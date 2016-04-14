@@ -62,12 +62,18 @@
 
   // Is a given string a symbol?
   var isSymbol = function(string) {
-    return string.charAt( 0 ) === ':';
+    if (typeof string !== 'string') {
+      return false;
+    }
+    return string.charAt(0) === ':'
   };
 
   // Converts symbol to string, Example:
   // ':errors' -> 'errors'
   var symbolToString = function(string) {
+    if (typeof string !== 'string') {
+      return string;
+    }
     return string.substring(1);
   }
 
