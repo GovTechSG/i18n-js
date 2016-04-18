@@ -52,6 +52,8 @@ var DEBUG = false;
             }
           }
         }
+      , shallow: ":deep"
+      , deep: "The ocean is pretty deep, isn't it!"
     };
 
     Translations["en-US"] = {
